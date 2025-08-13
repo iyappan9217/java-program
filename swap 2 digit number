@@ -1,0 +1,24 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+import java.util.Scanner;
+
+public class SwapDigits {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int input = scanner.nextInt();
+        scanner.close();
+        String inputStr = Integer.toString(input);
+
+        if (inputStr.length() < 2) {
+
+            return;
+        }
+        char first = inputStr.charAt(0);
+        char second = inputStr.charAt(1);
+        System.out.println("" + second + first);
+    }
+}
