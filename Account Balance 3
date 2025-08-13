@@ -1,0 +1,35 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+public class BankProcess {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int balance = scanner.nextInt();
+        int operation = scanner.nextInt();
+
+        switch (operation) {
+            case 1: 
+                int depositAmount = scanner.nextInt();
+                balance += depositAmount;
+                System.out.println(balance);
+                break;
+
+            case 2: 
+                int withdrawAmount = scanner.nextInt();
+                if (withdrawAmount > balance) {
+                    System.out.println("Insufficient Balance");
+                } else {
+                    balance -= withdrawAmount;
+                    System.out.println(balance);
+                }
+                break;
+
+            default:
+                System.out.println("Invalid Input");
+                break;
+
+    }
+  }
+}
