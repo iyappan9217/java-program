@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class AlphabetIncreasingPattern {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int n = scanner.nextInt(); // Read input
+        scanner.close();
+
+        for (int i = 0; i < n; i++) {
+            char ch = (char) ('A' + i); // Starting character for each row
+            for (int j = 0; j <= i; j++) {
+                System.out.print(ch + " ");
+                ch++; // Move to next character
+            }
+            System.out.println(); // New line after each row
+        }
+    }
+}
